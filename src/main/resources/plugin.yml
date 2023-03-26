@@ -1,0 +1,9 @@
+name: GenshinShop+
+version: '${version}'
+main: org.teenkung.genshinshop.GenshinShop_
+api-version: 1.19
+prefix: GenshinShop+
+depend: [ NBTAPI ]
+softdepend: [ Vault, ItemsAdder, MMOItems ]
+authors: [ Teenkung123 ]
+description: Genshin Impact like Shop System with customizable GUI
