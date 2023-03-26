@@ -1,0 +1,99 @@
+Shop:
+  ID: ExampleShop
+  GUIs:
+    Title: "Example Shop"
+    Layout:
+      - "BBBBBBBBB"
+      - "BEEEEEEEB"
+      - "BEEEEEEEB"
+      - "BEEEEEEEB"
+      - "PEEEEEEEN"
+      - "BBBBBBBBB"
+    Shop_Slot: [10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 22, 23, 24, 27, 28, 29, 30, 31, 32, 36, 37, 38, 39, 40, 41, 42, 43]
+    Next_Page: [44]
+    Previous_Page: [35]
+    Items:
+      B:
+        Type: MMOItems
+        Category: Material
+        ID: BACKGROUND
+        Amount: 1
+      N:
+        Type: ItemsAdder
+        Item: itemsadder:next_page
+        Amount: 1
+      P:
+        Type: ItemsAdder
+        Item: itemsadder:previous_page
+        Amount: 1
+      E:
+        Type: Vanilla
+        Material: DIAMOND
+        Amount: 1
+        Name: "&e "
+        Lore: []
+        ModelData: 0
+        Glowing: false
+
+  Items:
+    Example_Item:
+      Type: MMOItems
+      Category: SWORD
+      ID: Example_Item
+      Amount: 1
+      Shop:
+        Price:
+          Vault:
+            Amount: 1000
+        Requirements:
+          Permission: genshinshop.example_item
+          PlaceholderAPI:
+            "1":
+              Placeholder: "%player_level%"
+              Operator: ">="
+              Value: 10
+        Cooldown:
+          #Type: Daily, Weekly, Monthly, Once, Cooldown
+          Type: Daily
+          Limit: 10
+
+
+    Example_Item2:
+      Type: ItemsAdder
+      Item: itemsadder:example_item
+      Amount: 1
+      Shop:
+        Price:
+          DevCurrency:
+            Currency: ExampleCurrency
+            Amount: 100
+        Requirements:
+          Permission: genshinshop.example_item2
+          PlaceholderAPI:
+            "1":
+              Placeholder: "%player_level%"
+              Operator: ">="
+              Value: 10
+
+    Example_Item3:
+      Type: Vanilla
+      Material: DIAMOND
+      Amount: 1
+      Name: "&e "
+      Lore: [ ]
+      ModelData: 0
+      Glowing: false
+      Shop:
+        Price:
+          Vault:
+            Amount: 1000
+          DevCurrency:
+            Currency: ExampleCurrency
+            Amount: 100
+        Requirements:
+          Permission: genshinshop.example_item3
+          PlaceholderAPI:
+            "1":
+              Placeholder: "%player_level%"
+              Operator: ">="
+              Value: 10

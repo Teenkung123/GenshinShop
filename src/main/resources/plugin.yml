@@ -1,6 +1,6 @@
-name: GenshinShop+
+name: GenshinShopPlus
 version: '${version}'
-main: org.teenkung.genshinshop.GenshinShop_
+main: org.teenkung.genshinshop.GenshinShop
 api-version: 1.19
 prefix: GenshinShop+
 depend: [ NBTAPI ]
